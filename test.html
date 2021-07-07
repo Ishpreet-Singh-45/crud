@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+    <!-- Bootstrap Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap Icons CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $('#modalHeaderAnimation').css("borderRadius", "10px");
+            $('#myModalLabel').css("font-size", "1.5rem");
+            $('#button').click(function()
+            {
+                var div = $("#modalHeaderAnimation");
+                for (var i=0; i<3; i++)
+                {
+                    div.animate({
+                        backgroundColor: "#f8d7da;",
+                        margin: "10px"
+                    });
+                    div.animate({
+                        backgroundColor: "#fff;",
+                        margin: "10px"
+                    }, 'slow');
+                }
+            });
+        });
+    </script>
+</head>
+<style>
+</style>
+<body>
+    <button type="button"id="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Launch</button>
+
+    <!-- Modal -->
+    <div class="modal" id="myModal" tab-index="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" id="modalHeaderAnimation">
+                    <h5 class="modal-title" id="myModalLabel">
+                        Error <span class="bi bi-exclamation-lg"></span>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="display-6" style="font-size: 1.5rem">Please fill the form first. </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Okay</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

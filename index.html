@@ -1,0 +1,582 @@
+
+<!-- Main Index website file - Controller to all other pages.  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script>
+            var url = window.location.href;
+            console.log(url);
+            function redirect()
+            {
+                window.location.replace("url");
+            }
+            $(document).ready(function()
+            {
+                $("[data-toggle='tooltip']").tooltip();
+            })
+        </script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BootStrap 4 Template</title>
+        <link rel="stylesheet" href="templates/styles/index.css">
+        <!-- Linking Bootstrap Minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <!-- Bootstrap JS Files -->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+    </head>
+    <style>
+        #section_1 a
+        {
+            text-decoration: none;
+        }
+    </style>
+    <body>
+        <!-- Navigation Section -->
+        <section id="section_1">
+            <div class="container-fluid">
+                <div class="row mt-3">
+                    <div class="col-md-5">
+                        <a href="./index.html" style="color: black;"><h1>Navigation Logo</h1></a>
+                    </div>
+                    <div class="col-sm-7 float-right">
+                        <ul class="nav nav-pills justify-content-end">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./index.html" data-toggle="tooltip" title="Home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./templates/designs/about.html" data-toggle="tooltip" title="About">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./server/database/insert.php" data-toggle="tooltip" title="Contact Form">Help</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./server/database/index.php" data-toggle="tooltip" title="View Database">View Records</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Navigation Section ends -->
+
+
+        
+        <!-- Article section -->
+        <section id="section_2">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6" id="image_col">
+                        <img src="templates/images/1.jpg" class="img-fluid float-left" width="800" height="600">
+                    </div>
+
+                    <!-- product details -->
+                    <div class="col-md-6">
+                        <h1 id="product_name">
+                            Product Name
+                        </h1>
+                        <p class="display-4">
+                            <h6><a href="#reviews_direct" style="color: black; text-decoration: none; margin-top: -15px;">★★★★☆ 105 reviews</a></h6>
+                        </p>
+                        
+                        <hr class="innerline">
+
+                        <div class="row">
+                            <div class="col-3">
+                                <span class="float-left">
+                                    <h3>Price: $300</h3>
+                                </span>
+                            </div>
+                            <div class="col-3 float-right" id="dropdown">
+                                <div class="dropdown">
+                                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Select Model</button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Link 1</a>
+                                        <a class="dropdown-item" href="#">Link 2</a>
+                                        <a class="dropdown-item" href="#">Link 3</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        <hr class="innerline">
+
+                        <p class="font-italic">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur officiis dolorum maxime eius natus iste vero quisquam, ipsa recusandae sit a sint tempore sed ea odit aliquid in placeat magni!
+                        </p>
+                        <hr class="innerline">
+                        <button type="button" id="addCart" class="btn-primary btn-lg">Add To Cart</button>
+                    </div> <!-- end product details -->
+                </div>
+
+            </div>
+        </section>
+        <!-- Article Section ends -->
+
+
+        <hr>
+
+
+        <!-- Similar products -->
+        <section id="section_3">
+            <div class="container-fluid">
+                <!-- Similar Products heading -->
+                <div class="row" id="similar_heading">
+                    <div class="col">
+                        <h1 class="text-center">
+                            Similar Products
+                        </h1>
+                    </div>
+                </div>
+                
+                <div class="row" id="products">
+                    <!-- Product 1 -->
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="col">
+                                <img src="templates/images/1.jpg" class="img-thumbnail float-left">
+                            </div>
+                            <div class="col">
+                                <p class="font-weight-bold">Product Name</p>
+                                <p class="font-weight-light font-italic reviews">★★★☆☆ 10 reviews</p>
+                                <p class="font-weight-normal price">$200</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="col">
+                                <img src="templates/images/2.jpg" class="img-thumbnail float-left">
+                            </div>
+                            <div class="col">
+                                <p class="font-weight-bold">Product Name</p>
+                                <p class="font-weight-light font-italic reviews">★★★★☆ 205 reviews</p>
+                                <p class="font-weight-normal price">$2.50</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="col">
+                                <img src="templates/images/1.jpg" class="img-thumbnail float-left">
+                            </div>
+                            <div class="col">
+                                <p class="font-weight-bold">Product Name</p>
+                                <p class="font-weight-light font-italic reviews">★★☆☆☆ 150 reviews</p>
+                                <p class="font-weight-normal price">$175.50</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="col">
+                                <img src="templates/images/2.jpg" class="img-thumbnail float-left">
+                            </div>
+                            <div class="col">
+                                <p class="font-weight-bold">Product Name</p>
+                                <p class="font-weight-light font-italic reviews">★★★★★ 105 reviews</p>
+                                <p class="font-weight-normal price">$1000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Similars Section ends -->
+
+
+        <hr>
+
+        <!-- Products you might like -->
+        <section id="section_4">
+        <div class="wrapper">
+            <div class="container-fluid">
+                <!-- Products heading -->
+                <div class="row" id="similar_heading">
+                    <div class="col">
+                        <h1 class="text-center">
+                            Products you might Like
+                        </h1>
+                    </div>
+                </div>
+    
+                <!-- Thumbnails and their content-->
+                <div class="carousel slide" data-ride="carousel" data-interval="1500" id="myCarousel">
+                    <!-- Slides -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row" id="products">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                <!-- Product 1 -->
+                                                <div class="col-sm-3">
+                                                    <div clas="thumb-wrapper"> <!-- Image + details -->
+                                                        <div class="img-box">
+                                                            <img src="templates/images/1.jpg" class="img-responsive" alt="product_1.jpg" width="200" height="100">
+                                                        </div>
+                                                        <div class="thumb-content">
+                                                            <h4>Product Name</h4>
+                                                            <p class="item-price">$340</p>
+                                                            <div class="star-rating">
+                                                                <ul class="list-inline">
+                                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                                                </ul>
+                                                            </div>
+                                                            <a href="#" class="btn btn-primary">Add To Cart</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                            
+                                                <!-- Product 2 -->
+                                                <div class="col-sm-3">
+                                                    <div clas="thumb-wrapper"> <!-- Image + details -->
+                                                        <div class="img-box">
+                                                            <img src="templates/images/2.jpg" class="img-responsive" alt="product_1.jpg" width="200" height="100">
+                                                        </div>
+                                                        <div class="thumb-content">
+                                                            <h4>Product Name</h4>
+                                                            <p class="item-price">$430.85</p>
+                                                            <div class="star-rating">
+                                                                <ul class="list-inline">
+                                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                                </ul>
+                                                            </div>
+                                                            <a href="#" class="btn btn-primary">Add To Cart</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                            
+                                                <!-- Product 3 -->
+                                                <div class="col-sm-3">
+                                                    <div clas="thumb-wrapper"> <!-- Image + details -->
+                                                        <div class="img-box">
+                                                            <img src="templates/images/1.jpg" class="img-responsive" alt="product_1.jpg" width="200" height="100">
+                                                        </div>
+                                                        <div class="thumb-content">
+                                                            <h4>Product Name</h4>
+                                                            <p class="item-price">$120.47</p>
+                                                            <div class="star-rating">
+                                                                <ul class="list-inline">
+                                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                                                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                                                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                                                </ul>
+                                                            </div>
+                                                            <a href="#" class="btn btn-primary">Add To Cart</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                            
+                                                <!-- Product 4 -->
+                                                <div class="col-sm-3">
+                                                    <div clas="thumb-wrapper"> <!-- Image + details -->
+                                                        <div class="img-box">
+                                                            <img src="templates/images/2.jpg" class="img-responsive" alt="product_1.jpg" width="200" height="100">
+                                                        </div>
+                                                        <div class="thumb-content">
+                                                            <h4>Product Name</h4>
+                                                            <p class="item-price">$100</p>
+                                                            <div class="star-rating">
+                                                                <ul class="list-inline">
+                                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                                    <li class="list-inline-item"><i class="fa fa-star-half-o"></i></li>
+                                                                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                                                </ul>
+                                                            </div>
+                                                            <a href="#" class="btn btn-primary">Add To Cart</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row" id="products">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                <!-- Product 1 -->
+                                                <div class="col-sm-3">
+                                                    <div clas="thumb-wrapper"> <!-- Image + details -->
+                                                        <div class="img-box">
+                                                            <img src="templates/images/1.jpg" class="img-responsive" alt="product_1.jpg" width="200" height="100">
+                                                        </div>
+                                                        <div class="thumb-content">
+                                                            <h4>Product Name</h4>
+                                                            <p class="item-price">$340</p>
+                                                            <div class="star-rating">
+                                                                <ul class="list-inline">
+                                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                                                </ul>
+                                                            </div>
+                                                            <a href="#" class="btn btn-primary">Add To Cart</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                            
+                                                <!-- Product 2 -->
+                                                <div class="col-sm-3">
+                                                    <div clas="thumb-wrapper"> <!-- Image + details -->
+                                                        <div class="img-box">
+                                                            <img src="templates/images/2.jpg" class="img-responsive" alt="product_1.jpg" width="200" height="100">
+                                                        </div>
+                                                        <div class="thumb-content">
+                                                            <h4>Product Name</h4>
+                                                            <p class="item-price">$430.85</p>
+                                                            <div class="star-rating">
+                                                                <ul class="list-inline">
+                                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                                </ul>
+                                                            </div>
+                                                            <a href="#" class="btn btn-primary">Add To Cart</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                            
+                                                <!-- Product 3 -->
+                                                <div class="col-sm-3">
+                                                    <div clas="thumb-wrapper"> <!-- Image + details -->
+                                                        <div class="img-box">
+                                                            <img src="templates/images/1.jpg" class="img-responsive" alt="product_1.jpg" width="200" height="100">
+                                                        </div>
+                                                        <div class="thumb-content">
+                                                            <h4>Product Name</h4>
+                                                            <p class="item-price">$120.47</p>
+                                                            <div class="star-rating">
+                                                                <ul class="list-inline">
+                                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                                                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                                                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                                                </ul>
+                                                            </div>
+                                                            <a href="#" class="btn btn-primary">Add To Cart</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                            
+                                                <!-- Product 4 -->
+                                                <div class="col-sm-3">
+                                                    <div clas="thumb-wrapper"> <!-- Image + details -->
+                                                        <div class="img-box">
+                                                            <img src="templates/images/2.jpg" class="img-responsive" alt="product_1.jpg" width="200" height="100">
+                                                        </div>
+                                                        <div class="thumb-content">
+                                                            <h4>Product Name</h4>
+                                                            <p class="item-price">$100</p>
+                                                            <div class="star-rating">
+                                                                <ul class="list-inline">
+                                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                                    <li class="list-inline-item"><i class="fa fa-star-half-o"></i></li>
+                                                                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                                                </ul>
+                                                            </div>
+                                                            <a href="#" class="btn btn-primary">Add To Cart</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <button class="carousel-control-prev" data-target="#myCarousel" data-slide="prev">
+                        <span class="carousel_icon carousel-control-prev-icon"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" data-target="#myCarousel" data-slide="next">
+                        <span class="carousel_icon carousel-control-next-icon"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button> -->
+                </div> 
+                
+            </div>
+            
+        </div>
+        </section>
+        <!-- Products might like Section ends -->
+
+
+        <hr>
+
+        <!-- Others Like Section -->
+        <section id="section_5">
+            <div class="container-fluid">
+                <!-- Similar Products heading -->
+                <div class="row" id="similar_heading">
+                    <div class="col">
+                        <h1 class="text-center">
+                            Others have also liked/viewed
+                        </h1>
+                    </div>
+                </div>
+                <!-- Section Part 2 - products and thieir details -->
+                <div class="row" id="products">
+                    <!-- Product 1 -->
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="col">
+                                <img src="templates/images/1.jpg" class="img-thumbnail float-left">
+                            </div>
+                            <div class="col">
+                                <p class="font-weight-bold">Product Name</p>
+                                <p class="font-weight-light font-italic reviews">★★★☆☆ 10 reviews</p>
+                                <p class="font-weight-normal price">$200</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="col">
+                                <img src="templates/images/2.jpg" class="img-thumbnail float-left">
+                            </div>
+                            <div class="col">
+                                <p class="font-weight-bold">Product Name</p>
+                                <p class="font-weight-light font-italic reviews">★★★★☆ 205 reviews</p>
+                                <p class="font-weight-normal price">$2.50</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="col">
+                                <img src="templates/images/1.jpg" class="img-thumbnail float-left">
+                            </div>
+                            <div class="col">
+                                <p class="font-weight-bold">Product Name</p>
+                                <p class="font-weight-light font-italic reviews">★★☆☆☆ 150 reviews</p>
+                                <p class="font-weight-normal price">$175.50</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="col">
+                                <img src="templates/images/2.jpg" class="img-thumbnail float-left">
+                            </div>
+                            <div class="col">
+                                <p class="font-weight-bold">Product Name</p>
+                                <p class="font-weight-light font-italic reviews">★★★★★ 105 reviews</p>
+                                <p class="font-weight-normal price">$1000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Others Like Section ends -->
+
+
+        <hr>
+
+        <!-- Reviews Section -->
+        <section id="section_6">
+            <div class="container-fluid">
+                <div class="col">
+                    <h1 class="text-center" id="reviews_direct"> Reviews </h1>
+                </div>
+                <div class="media p-4">
+                    <img src="templates/images/img_avatar3.png" class="rounded-circle" width="75" height="75">
+                    <div class="media-body">
+                        <h4>Chris Patt <i class="reviews_date">Posted on January 19, 2020</i></h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat iure quisquam officia perferendis, explicabo doloribus dolorum quibusdam quidem tenetur voluptatum, vitae excepturi autem possimus enim? Doloremque illo eligendi quis fugiat!</p>
+                        <div class="media p-4">
+                            <img src="templates/images/img_avatar4.png" class="rounded-circle" width="75" height="75">
+                            <div class="media-body">
+                                <h5>John Doe <i class="reviews_date">Posted on October 15, 2020</i></h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo quae delectus qui accusamus assumenda totam aut quasi quidem veritatis exercitationem nisi architecto, natus, aliquam veniam! Molestiae natus alias aspernatur sunt.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr style="border-top: 2px solid rgba(0, 0, 0, .1);">
+
+                <div class="media p-4">
+                    <img src="templates/images/img_avatar3.png" class="rounded-circle" width="75" height="75">
+                    <div class="media-body">
+                        <h4>Chris Patt <i class="reviews_date">Posted on January 19, 2020</i></h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat iure quisquam officia perferendis, explicabo doloribus dolorum quibusdam quidem tenetur voluptatum, vitae excepturi autem possimus enim? Doloremque illo eligendi quis fugiat!</p>
+                        <div class="media p-4">
+                            <img src="templates/images/img_avatar4.png" class="rounded-circle" width="75" height="75">
+                            <div class="media-body">
+                                <h5>John Doe <i class="reviews_date">Posted on October 15, 2020</i></h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo quae delectus qui accusamus assumenda totam aut quasi quidem veritatis exercitationem nisi architecto, natus, aliquam veniam! Molestiae natus alias aspernatur sunt.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr style="border-top: 2px solid rgba(0, 0, 0, .1)">
+
+                <div class="media p-4">
+                    <img src="templates/images/img_avatar3.png" class="rounded-circle" width="75" height="75">
+                    <div class="media-body">
+                        <h4>Alexa Dev <i class="reviews_date">Posted on January 19, 2020</i></h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat iure quisquam officia perferendis, explicabo doloribus dolorum quibusdam quidem tenetur voluptatum, vitae excepturi autem possimus enim? Doloremque illo eligendi quis fugiat!</p>
+                        <div class="media p-4">
+                            <img src="templates/images/img_avatar4.png" class="rounded-circle" width="75" height="75">
+                            <div class="media-body">
+                                <h5> Siri Regena <i class="reviews_date">Posted on October 15, 2020</i></h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo quae delectus qui accusamus assumenda totam aut quasi quidem veritatis exercitationem nisi architecto, natus, aliquam veniam! Molestiae natus alias aspernatur sunt.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Reviews Section ends -->
+    </body>
+</html>
